@@ -1,5 +1,5 @@
 {
-    "name": "nilambar/detectlish",
+    "name": "ernilambar/detectlish",
     "description": "Detect if a given string is English or not.",
     "license": "MIT",
     "type": "library",
