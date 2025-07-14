@@ -1,0 +1,59 @@
+{
+    "name": "nilambar/detectlish",
+    "description": "Detect if a given string is English or not.",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Nilambar Sharma",
+            "email": "nilambar@outlook.com",
+            "homepage": "https://nilambar.net/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.1",
+        "ernilambar/coding-standard": "^1.0",
+        "php-parallel-lint/php-parallel-lint": "^1.4",
+        "phpcompatibility/php-compatibility": "dev-develop#2b7b6e8f5d0ccae3bd41c25bcf1298884a5e1f62",
+        "phpunit/phpunit": "^9.0",
+        "slevomat/coding-standard": "^8",
+        "wp-coding-standards/wpcs": "^3.1"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Nilambar\\Detectlish\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Nilambar\\Detectlish\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "ergebnis/composer-normalize": true
+        },
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "7.4"
+        },
+        "sort-packages": true
+    },
+    "scripts": {
+        "format": "@php ./vendor/bin/phpcbf --report-full --report-summary",
+        "lint": [
+            "@lint-php",
+            "@phpcs"
+        ],
+        "lint-php": "@php ./vendor/bin/parallel-lint --colors --exclude .git --exclude vendor --exclude node_modules --exclude deploy .",
+        "phpcs": "@php ./vendor/bin/phpcs --report-full --report-summary",
+        "test": "phpunit"
+    }
+}
