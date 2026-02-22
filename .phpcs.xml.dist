@@ -62,12 +62,6 @@
 		<exclude name="WordPress.Security.NonceVerification.Recommended"/>
 	</rule>
 
-	<!-- Loads the PHP Compatibility ruleset. -->
-	<rule ref="PHPCompatibility" />
-
-	<!-- PHP version check. -->
-	<config name="testVersion" value="7.4-"/>
-
 	<!-- Do not require docblocks for unit tests -->
 	<rule ref="Squiz.Commenting.FunctionComment.Missing">
 		<exclude-pattern>tests/*</exclude-pattern>
